@@ -45,6 +45,7 @@ namespace asp_taller_pi_1__2_
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

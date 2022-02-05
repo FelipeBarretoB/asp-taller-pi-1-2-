@@ -42,7 +42,7 @@ namespace asp_taller_pi_1__2_.Areas.Identity.Pages.Account
             _context.Users.ToList().ForEach(u => {
                 Format.Add(new Format());
                 
-                Format[c].UserNamed=u.UserName;
+                Format[c].UserNamed=u.UserNamed;
                 Format[c].firstName = u.firstName;
                 Format[c].LastName = u.LastName;
                 Format[c].BirthDate = u.BirthDate;

@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using asp_taller_pi_1__2_.Data;
 
 namespace asp_taller_pi_1__2_.Migrations
 {
     [DbContext(typeof(Db_Context1))]
-    partial class Db_ContextModelSnapshot : ModelSnapshot
+    [Migration("20220205182727_Format2")]
+    partial class Format2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

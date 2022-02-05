@@ -9,6 +9,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+using asp_taller_pi_1__2_.Data;
+using Microsoft.EntityFrameworkCore;
+using asp_taller_pi_1__2_.Areas.Identity.Data;
+
 namespace asp_taller_pi_1__2_
 {
     public class Startup
@@ -24,7 +28,20 @@ namespace asp_taller_pi_1__2_
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
-        }
+
+            services.AddDbContext<Db_Context1>(options =>
+                options.UseSqlServer(
+                    Configuration.GetConnectionString("Db_ContextConnection")));
+
+            services.AddDefaultIdentity<asp_taller_pi_1__2_User>(options =>
+            {
+                options.SignIn.RequireConfirmedAccount = false;
+                options.Password.RequireLowercase = false;
+                options.Password.RequireUppercase = false;
+
+            })
+                .AddEntityFrameworkStores<Db_Context1>();
+        }  
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

@@ -6,6 +6,8 @@ using asp_taller_pi_1__2_.Areas.Identity.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using asp_taller_pi_1__2_.Areas.Identity;
+using asp_taller_pi_1__2_.Areas.Model;
 
 namespace asp_taller_pi_1__2_.Data
 {
@@ -24,5 +26,9 @@ namespace asp_taller_pi_1__2_.Data
             // For example, you can rename the ASP.NET Identity table names and more.
             // Add your customizations after calling base.OnModelCreating(builder);
         }
+
+        public DbSet<asp_taller_pi_1__2_.Areas.Identity.IdentityHostingStartup> IdentityHostingStartup { get; set; }
+
+        public DbSet<asp_taller_pi_1__2_.Areas.Model.Format> Format { get; set; }
     }
 }

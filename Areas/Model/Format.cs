@@ -6,16 +6,15 @@ using Microsoft.AspNetCore.Identity;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace asp_taller_pi_1__2_.Areas.Identity.Data
+
+namespace asp_taller_pi_1__2_.Areas.Model
 {
-    // Add profile data for application users by adding properties to the asp_taller_pi_1__2_User class
-    public class asp_taller_pi_1__2_User : IdentityUser
+    public class Format 
     {
-        
-        
+        public int ID { get; set; }
         public string UserNamed { get; set; }
         [PersonalData]
-        [Column(TypeName="nvarchar(100)")]
+        [Column(TypeName = "nvarchar(100)")]
         public string firstName { get; set; }
         [PersonalData]
         [Column(TypeName = "nvarchar(100)")]

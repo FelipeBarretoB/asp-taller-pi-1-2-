@@ -1,0 +1,50 @@
+﻿@page
+@model asp_taller_pi_1__2_.Areas.Identity.Pages.Account.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Format[0].UserNamed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Format[0].firstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Format[0].LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Format[0].BirthDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Format) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserNamed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.firstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BirthDate)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

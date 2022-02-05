@@ -20,6 +20,6 @@ namespace asp_taller_pi_1__2_.Areas.Identity.Data
         public string LastName { get; set; }
 
         [DataType(DataType.Date)]
-        public DateTime birthDate { get; set; }
+        public DateTime BirthDate { get; set; }
     }
 }

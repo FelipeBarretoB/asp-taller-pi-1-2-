@@ -52,6 +52,27 @@ namespace asp_taller_pi_1__2_.Areas.Identity.Pages.Account
             public string Email { get; set; }
 
             [Required]
+            [DataType(DataType.Text)]
+            [Display(Name = "User name")]
+            public string Usernamed { get; set; }
+
+            [Required]
+            [DataType(DataType.Text)]
+            [Display(Name = "FirstName")]
+            public string FirstName { get; set; }
+
+            [Required]
+            [DataType(DataType.Text)]
+            [Display(Name = "LastName")]
+            public string LastName { get; set; }
+
+            [Required]
+            [DataType(DataType.Date)]
+            [Display(Name = "Email")]
+            public DateTime BirthDate { get; set; }
+
+
+            [Required]
             [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
             [DataType(DataType.Password)]
             [Display(Name = "Password")]
@@ -75,7 +96,7 @@ namespace asp_taller_pi_1__2_.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                var user = new asp_taller_pi_1__2_User { UserName = Input.Email, Email = Input.Email };
+                var user = new asp_taller_pi_1__2_User { UserName = Input.Email, Email = Input.Email,firstName= Input.FirstName,LastName = Input.LastName, BirthDate = Input.BirthDate };
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {

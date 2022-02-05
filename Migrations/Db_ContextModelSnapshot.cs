@@ -8,7 +8,7 @@ using asp_taller_pi_1__2_.Data;
 
 namespace asp_taller_pi_1__2_.Migrations
 {
-    [DbContext(typeof(Db_Context))]
+    [DbContext(typeof(Db_Context1))]
     partial class Db_ContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

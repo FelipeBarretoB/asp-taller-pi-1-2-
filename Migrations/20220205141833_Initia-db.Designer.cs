@@ -9,7 +9,7 @@ using asp_taller_pi_1__2_.Data;
 
 namespace asp_taller_pi_1__2_.Migrations
 {
-    [DbContext(typeof(Db_Context))]
+    [DbContext(typeof(Db_Context1))]
     [Migration("20220205141833_Initia-db")]
     partial class Initiadb
     {

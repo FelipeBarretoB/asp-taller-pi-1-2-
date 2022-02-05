@@ -9,9 +9,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace asp_taller_pi_1__2_.Data
 {
-    public class Db_Context : IdentityDbContext<asp_taller_pi_1__2_User>
+    public class Db_Context1 : IdentityDbContext<asp_taller_pi_1__2_User>
     {
-        public Db_Context(DbContextOptions<Db_Context> options)
+        public int ID { get; set; }
+        public Db_Context1(DbContextOptions<Db_Context1> options)
             : base(options)
         {
         }

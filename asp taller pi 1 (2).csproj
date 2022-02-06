@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\Model\" />
+    <Folder Include="doc\" />
   </ItemGroup>
 
 </Project>
